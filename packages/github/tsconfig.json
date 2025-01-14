@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../types" }  // 添加对types包的引用
+  ]
+}   

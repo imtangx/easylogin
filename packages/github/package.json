@@ -1,0 +1,27 @@
+{
+  "name": "@esaylogin/github",
+  "version": "1.0.0",
+  "description": "github登录",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx dist/src/server.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@esaylogin/github": "workspace:^",
+    "@esaylogin/types": "workspace:^",
+    "axios": "^1.7.9",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@esaylogin/types": "workspace:*",
+    "@types/express": "^5.0.0"
+  }
+}
