@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "composite": true,
+    "baseUrl": "./",
+    "paths": {
+      "@esaylogin/core": ["packages/core/src"],
+      "@esaylogin/types": ["packages/types/src"],
+      "@esaylogin/github": ["packages/github/src"],
+    }
+  },
+  "include": ["./packages/**/*.ts"],
+  "exclude": ["**/node_modules", "**/dist"]
+}
