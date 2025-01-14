@@ -1,0 +1,16 @@
+{
+  "name": "@esaylogin/types",
+  "version": "1.0.0",
+  "description": "第三方登录类型包",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
