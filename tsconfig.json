@@ -12,6 +12,7 @@
       "@esaylogin/core": ["packages/core/src"],
       "@esaylogin/types": ["packages/types/src"],
       "@esaylogin/github": ["packages/github/src"],
+      "@esaylogin/email": ["packages/email/src"],
     }
   },
   "include": ["./packages/**/*.ts"],
