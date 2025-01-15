@@ -19,6 +19,10 @@
   "license": "ISC",
   "devDependencies": {
     "lerna": "^8.1.9",
-    "tsx": "^4.19.2"
+    "tsx": "^4.19.2",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
