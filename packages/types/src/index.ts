@@ -28,3 +28,26 @@ export interface GithubLoginResult {
   };
   error?: string;
 }
+
+export interface EmailConfig {
+  host: string;
+  port: number;
+  user: string;
+  authCode: string;
+  from: string;
+}
+
+export interface EmailVerifyCodeRecord {
+  code: string;
+  expireAt: number; // 过期时间戳
+  attempts: number; // 尝试次数
+}
+
+export interface EmailLoginResult {
+  success: boolean;
+  data?: {
+    email: string;
+    token: string; // JWT token
+  };
+  error?: string;
+}
