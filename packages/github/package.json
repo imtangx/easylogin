@@ -6,22 +6,23 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "start": "tsx dist/src/server.js",
-    "build": "tsc",
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "start": "node dist/server.js",
+    "server": "tsx watch __tests__/setup/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@esaylogin/github": "workspace:^",
     "@esaylogin/types": "workspace:^",
     "axios": "^1.7.9",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
-    "@esaylogin/types": "workspace:*",
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.6"
   }
 }
