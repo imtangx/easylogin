@@ -19,21 +19,21 @@ export class GithubAuthService {
     return `${GITHUB_ENDPOINTS.AUTHORIZE}?${params.toString()}`;
   }
 
-  async getAccessToken(code: string): Promise<GithubAuthResponse> {
+  async getAccessToken(authCode: string): Promise<GithubAuthResponse> {
     try {
       const response = await axios.post(
         GITHUB_ENDPOINTS.ACCESS_TOKEN,
         {
           client_id: this.config.clientId,
           client_secret: this.config.clientSecret,
-          code,
+          code: authCode,
           redirect_uri: this.config.callbackUrl,
         },
         {
           headers: {
             Accept: 'application/json',
           },
-          timeout: 5000,
+          timeout: 15000,
         }
       );
       return response.data;

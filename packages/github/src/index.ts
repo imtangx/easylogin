@@ -18,9 +18,9 @@ export class GithubLogin {
     return this.authService.getAuthorizeUrl();
   }
 
-  async handleCallback(code: string): Promise<GithubLoginResult> {
+  async handleCallback(authCode: string): Promise<GithubLoginResult> {
     try {
-      const authResponse = await this.authService.getAccessToken(code);
+      const authResponse = await this.authService.getAccessToken(authCode);
       const userInfo = await this.apiService.getUserInfo(authResponse.access_token);
 
       return {

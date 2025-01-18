@@ -20,15 +20,15 @@ app.get('/auth/github', (req, res) => {
 });
 
 app.get('/auth/github/callback', async (req, res) => {
-  const { code } = req.query;
+  const { code: authCode } = req.query;
 
-  if (!code || typeof code !== 'string') {
-    res.status(400).json({ error: 'Invalid code' });
+  if (!authCode || typeof authCode !== 'string') {
+    res.status(400).json({ error: 'Invalid authCode' });
     return;
   }
 
   try {
-    const response = await githubLogin.handleCallback(code);
+    const response = await githubLogin.handleCallback(authCode);
     res.json(response);
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
