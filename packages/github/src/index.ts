@@ -7,7 +7,7 @@ export class GithubLogin {
   private apiService: GithubApiService;
 
   constructor(config: GithubConfig) {
-    if (!config.clientId || !config.clientSecret || !config.callbackUrl) {
+    if (!config.clientId || !config.clientSecret || !config.callbackUrl || !config.scope) {
       throw new Error('Missing required configuration');
     }
     this.authService = new GithubAuthService(config);
