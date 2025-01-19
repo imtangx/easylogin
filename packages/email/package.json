@@ -3,26 +3,25 @@
   "version": "1.0.0",
   "description": "邮箱验证码登录",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite build --watch",
+    "dev": "vite",
     "build": "vite build",
-    "start": "node dist/server.js",
-    "server": "tsx watch __tests__/setup/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "tsx __tests__/setup/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@esaylogin/types": "workspace:^",
-    "express": "^4.21.2",
     "nodemailer": "^6.9.16",
     "tsx": "^4.19.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/nodemailer": "^6.4.17"
+    "@types/nodemailer": "^6.4.17",
+    "express": "^4.21.2"
   }
 }
