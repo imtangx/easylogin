@@ -1,16 +1,15 @@
 {
   "name": "@esaylogin/github",
   "version": "1.0.0",
-  "description": "github登录",
+  "description": "github登录包",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite build --watch",
+    "dev": "vite",
     "build": "vite build",
-    "start": "node dist/server.js",
-    "server": "tsx watch __tests__/setup/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "tsx watch __tests__/setup/server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,11 +17,11 @@
   "dependencies": {
     "@esaylogin/types": "workspace:^",
     "axios": "^1.7.9",
-    "express": "^4.21.2",
-    "tsx": "^4.19.2"
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.6"
+    "@types/node": "^22.10.6",
+    "tsx": "^4.19.2"
   }
 }
