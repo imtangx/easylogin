@@ -35,14 +35,6 @@ app.get('/auth/github/callback', async (req, res) => {
   }
 });
 
-//测试页面
-app.get('/', (req, res) => {
-  res.send(`
-    <h1>GitHub Login Test</h1>
-    <a href="/auth/github">Login with GitHub</a>
-  `);
-});
-
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
