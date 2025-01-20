@@ -20,11 +20,6 @@ const emailLogin = new EmailLogin({
 app.get('/auth/email', async (req, res) => {
   const { email } = req.query;
 
-  if (!email) {
-    res.status(400).json({ error: '邮箱地址不能为空' });
-    return;
-  }
-
   try {
     const success = await emailLogin.sendCode(email);
     res.json({ success });
@@ -35,7 +30,7 @@ app.get('/auth/email', async (req, res) => {
 });
 
 //验证码登录
-app.post('/auth/email/callback', async (req, res) => {
+app.post('/auth/email/login', async (req, res) => {
   const { email, code } = req.body;
 
   if (!email || !code) {
@@ -52,58 +47,7 @@ app.post('/auth/email/callback', async (req, res) => {
   }
 });
 
-// 测试页面
-app.get('/', (req, res) => {
-  res.send(`
-    <h1>Email Login Test</h1>
-    <div>
-      <h2>发送验证码</h2>
-      <input type="email" id="email" placeholder="请输入邮箱">
-      <button onclick="sendCode()">发送验证码</button>
-    </div>
-    <div style="margin-top: 20px;">
-      <h2>验证登录</h2>
-      <input type="text" id="code" placeholder="请输入验证码">
-      <button onclick="verify()">验证登录</button>
-    </div>
-    <div id="result" style="margin-top: 20px;"></div>
-
-    <script>
-    async function sendCode() {
-      const email = document.getElementById('email').value;
-      try {
-        const res = await fetch('/auth/email?email=' + encodeURIComponent(email), {
-          method: 'GET'
-        });
-        const data = await res.json();
-        document.getElementById('result').innerText = 
-          data.success ? '验证码发送成功' : '验证码发送失败：' + data.error;
-      } catch (error) {
-        document.getElementById('result').innerText = '发送失败：' + error;
-      }
-    }
-
-    async function verify() {
-      const email = document.getElementById('email').value;
-      const code = document.getElementById('code').value;
-      try {
-        const res = await fetch('/auth/email/callback', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, code })
-        });
-        const data = await res.json();
-        document.getElementById('result').innerText = 
-          data.success ? '登录成功！' : '登录失败：' + data.error;
-      } catch (error) {
-        document.getElementById('result').innerText = '验证失败：' + error;
-      }
-    }
-    </script>
-  `);
-});
-
-const PORT = 8080;
+const PORT = 8081;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

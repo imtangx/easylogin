@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./email-logo.png" />
+    <title>邮箱验证码登录测试</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      .login-container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+        display: flex;
+      }
+
+      .input-group {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .email-input {
+        flex: 1;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+
+      input:focus {
+        border-color: #4a90e2;
+      }
+
+      button {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #357abd;
+      }
+
+      #sendCode {
+        white-space: nowrap;
+        width: auto;
+        min-width: 120px;
+      }
+
+      #loginBtn {
+        width: 100%;
+        margin-top: 1rem;
+        background-color: #4caf50;
+      }
+
+      #loginBtn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2 class="form-title">邮箱验证码登录</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <div class="email-input">
+            <input type="email" id="email" placeholder="请输入邮箱" required />
+          </div>
+          <button type="button" id="sendCode">发送验证码</button>
+        </div>
+        <div class="form-group">
+          <input type="text" id="verificationCode" placeholder="请输入验证码" required />
+        </div>
+        <div id="loginResult"></div>
+        <button type="submit" id="loginBtn">登录</button>
+      </form>
+    </div>
+
+    <script>
+      const emailInput = document.getElementById('email');
+      const sendCodeBtn = document.getElementById('sendCode');
+      const verifyCodeInput = document.getElementById('verificationCode');
+      const loginResult = document.getElementById('loginResult');
+      const loginBtn = document.getElementById('loginBtn');
+
+      sendCodeBtn.addEventListener('click', async () => {
+        const email = emailInput.value;
+        try {
+          const result = await fetch('http://localhost:8081/auth/email?email=' + encodeURIComponent(email), {
+            method: 'GET',
+          });
+
+          const data = await result.json();
+          loginResult.innerText = data.success ? '验证码发送成功' : '验证码发送失败：' + data.error;
+        } catch (error) {
+          loginResult.innerText = '请求失败';
+        }
+      });
+
+      loginBtn.addEventListener('click', async e => {
+        e.preventDefault();
+        const email = emailInput.value;
+        const code = verifyCodeInput.value;
+        try {
+          const result = await fetch('http://localhost:8081/auth/email/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, code }),
+          });
+
+          const data = await result.json();
+          loginResult.innerText = data.success ? '登录成功' : '登录失败：' + data.error;
+        } catch (error) {
+          loginResult.innerText = '请求失败';
+        }
+      });
+    </script>
+  </body>
+</html>
