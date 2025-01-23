@@ -29,6 +29,35 @@ export interface GithubLoginResult {
   error?: string;
 }
 
+export interface GiteeConfig {
+  clientId: string;
+  clientSecret: string;
+  callbackUrl: string;
+  scope: string[];
+}
+
+export interface GiteeAuthResponse {
+  access_token: string;
+  token_type: string;
+}
+
+export interface GiteeUserInfo {
+  id: number;
+  login: string;
+  name: string;
+  email: string;
+  avatar_url: string;
+}
+
+export interface GiteeLoginResult {
+  success: boolean;
+  data?: {
+    userInfo: GiteeUserInfo;
+    token: string;
+  };
+  error?: string;
+}
+
 export interface EmailConfig {
   host: string;
   port: number;
