@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" sizes="16x16" href="./logo_gitee_g_red.svg" />
+    <title>Gitee登录测试</title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 10vh">
+      <h1>Gitee登录测试</h1>
+      <button style="border: none; background: transparent; cursor: pointer">
+        <img src="./logo_gitee_g_red.svg" alt="Gitee" />
+      </button>
+    </div>
+  </body>
+
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      window.location.href = 'http://localhost:8082/auth/gitee';
+    });
+  </script>
+</html>
