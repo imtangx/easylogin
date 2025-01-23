@@ -1,0 +1,23 @@
+{
+  "name": "@esaylogin/gitee",
+  "version": "1.0.0",
+  "description": "gitee登录包",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "server": "tsx watch __tests__/setup/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@esaylogin/types": "workspace:^",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "tsx": "^4.19.2"
+  }
+}

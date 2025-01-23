@@ -61,6 +61,21 @@ importers:
         specifier: ^4.21.2
         version: 4.21.2
 
+  packages/gitee:
+    devDependencies:
+      '@esaylogin/types':
+        specifier: workspace:^
+        version: link:../types
+      axios:
+        specifier: ^1.7.9
+        version: 1.7.9
+      express:
+        specifier: ^4.21.2
+        version: 4.21.2
+      tsx:
+        specifier: ^4.19.2
+        version: 4.19.2
+
   packages/github:
     dependencies:
       '@esaylogin/types':
@@ -101,9 +116,6 @@ importers:
         specifier: ^4.19.2
         version: 4.19.2
     devDependencies:
-      '@esaylogin/email':
-        specifier: workspace:^
-        version: link:../email
       '@types/express':
         specifier: ^5.0.0
         version: 5.0.0
