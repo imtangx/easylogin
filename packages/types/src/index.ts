@@ -58,6 +58,29 @@ export interface GiteeLoginResult {
   error?: string;
 }
 
+export interface GoogleConfig {
+  clientId: string;
+  clientSecret: string;
+  callbackUrl: string;
+  scope: string[];
+}
+
+export interface GoogleUserInfo {}
+
+export interface GoogleAuthResponse {
+  access_token: string;
+  token_type: string;
+}
+
+export interface GoogleLoginResult {
+  success: boolean;
+  data?: {
+    userInfo: GoogleUserInfo;
+    token: string;
+  };
+  error?: string;
+}
+
 export interface EmailConfig {
   host: string;
   port: number;
