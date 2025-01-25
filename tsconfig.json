@@ -14,6 +14,7 @@
       "@esaylogin/github": ["packages/github/src"],
       "@esaylogin/email": ["packages/email/src"],
       "@esaylogin/gitee": ["packages/gitee/src"],
+      "@esaylogin/google": ["packages/google/src"],
       "@esaylogin/react": ["packages/react/src"]
     }
   },

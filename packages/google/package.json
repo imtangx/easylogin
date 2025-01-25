@@ -1,0 +1,27 @@
+{
+  "name": "@esaylogin/google",
+  "version": "1.0.0",
+  "description": "google登录包",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "server": "tsx watch __tests__/setup/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@esaylogin/types": "workspace:^",
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "express": "^4.21.2",
+    "tsx": "^4.19.2",
+    "vite": "^5.0.0"
+  }
+}
