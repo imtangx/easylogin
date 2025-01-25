@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" sizes="16x16" href="./google-logo.svg" />
+    <title>Google登录测试</title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 10vh">
+      <h1>Google登录测试</h1>
+      <button style="border: none; background: transparent; cursor: pointer">
+        <img src="./google-logo.svg" alt="Google" />
+      </button>
+      <div id="output"></div>
+    </div>
+  </body>
+
+  <script>
+    const button = document.querySelector('button');
+
+    button.addEventListener('click', () => {
+      window.location.href = 'http://localhost:8083/auth/google';
+    });
+
+    const fragment = window.location.hash.substring(1);
+    if (fragment) {
+      const params = new URLSearchParams(fragment);
+      const accessToken = params.get('access_token');
+
+      if (accessToken) {
+        console.log('Access Token:', accessToken);
+        fetch('https://people.googleapis.com/v1/people/me?personFields=names,emailAddresses,photos', {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log('User Info:', data);
+            const output = document.getElementById('output');
+            output.innerText = JSON.stringify(data);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            const output = document.getElementById('output');
+            output.innerText = 'Error: ' + error.message;
+          });
+      }
+    }
+  </script>
+</html>
