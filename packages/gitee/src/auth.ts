@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GiteeConfig, GiteeAuthResponse } from '@esaylogin/types';
+import { GiteeConfig, GiteeAuthResponse } from '@easylogin/types';
 import { GITEE_ENDPOINTS } from './constant';
 
 export class GiteeAuthService {

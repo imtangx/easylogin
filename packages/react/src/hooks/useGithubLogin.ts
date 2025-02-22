@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { GithubLogin } from '@esaylogin/github';
-import { GithubConfig, GithubLoginResult } from '@esaylogin/types';
+import { GithubLogin } from '@easylogin/github';
+import { GithubConfig, GithubLoginResult } from '@easylogin/types';
 
 export const useGithubLogin = (config: GithubConfig) => {
   const githubLogin = new GithubLogin(config);

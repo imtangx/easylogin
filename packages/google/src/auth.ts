@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GoogleConfig, GoogleAuthResponse } from '@esaylogin/types';
+import { GoogleConfig, GoogleAuthResponse } from '@easylogin/types';
 import { GOOGLE_ENDPOINTS } from './constant';
 
 export class GoogleAuthService {

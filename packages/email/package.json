@@ -1,5 +1,5 @@
 {
-  "name": "@esaylogin/email",
+  "name": "@easylogin/email",
   "version": "1.0.1",
   "description": "邮箱验证码登录",
   "type": "module",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@esaylogin/types": "workspace:^",
+    "@easylogin/types": "workspace:^",
     "nodemailer": "^6.9.16",
     "tsx": "^4.19.2"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "@esaylogin/gitee",
+  "name": "@easylogin/gitee",
   "version": "1.1.0",
   "description": "gitee登录包",
   "type": "module",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@esaylogin/types": "workspace:^",
+    "@easylogin/types": "workspace:^",
     "axios": "^1.7.9",
     "express": "^4.21.2",
     "tsx": "^4.19.2"

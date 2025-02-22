@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { GithubUserInfo } from '@esaylogin/types';
+import { GithubUserInfo } from '@easylogin/types';
 import { GITHUB_ENDPOINTS } from './constant';
 
-export class GithubApiService { 
+export class GithubApiService {
   async getUserInfo(accessToken: string): Promise<GithubUserInfo> {
     try {
       const response = await axios.get(GITHUB_ENDPOINTS.USER, {

@@ -1,5 +1,5 @@
 {
-  "name": "@esaylogin/core",
+  "name": "@easylogin/core",
   "version": "1.0.1",
   "description": "第三方登录核心包",
   "type": "module",

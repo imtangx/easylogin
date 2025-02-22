@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GithubConfig, GithubAuthResponse } from '@esaylogin/types';
+import { GithubConfig, GithubAuthResponse } from '@easylogin/types';
 import { GithubAuthService } from '../src/auth';
 import { GITHUB_ENDPOINTS } from '../src/constant';
 

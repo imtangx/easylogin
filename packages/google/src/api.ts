@@ -1,6 +1,6 @@
-import axios from "axios";
-import { GoogleUserInfo } from "@esaylogin/types";
-import { GOOGLE_ENDPOINTS } from "./constant";
+import axios from 'axios';
+import { GoogleUserInfo } from '@easylogin/types';
+import { GOOGLE_ENDPOINTS } from './constant';
 
 export class GoogleApiService {
   async getUserInfo(accessToken: string): Promise<GoogleUserInfo> {
@@ -10,7 +10,7 @@ export class GoogleApiService {
           Authorization: `Bearer ${accessToken}`,
         },
         params: {
-          personFields: "names,emailAddresses,photos", // 指定需要的字段
+          personFields: 'names,emailAddresses,photos', // 指定需要的字段
         },
         timeout: 15000,
       });

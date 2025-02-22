@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GithubConfig, GithubAuthResponse } from '@esaylogin/types';
+import { GithubConfig, GithubAuthResponse } from '@easylogin/types';
 import { GITHUB_ENDPOINTS } from './constant';
 
 export class GithubAuthService {
@@ -14,7 +14,7 @@ export class GithubAuthService {
       client_id: this.config.clientId,
       redirect_uri: this.config.callbackUrl,
       scope: this.config.scope.join(' '),
-      response_type: 'code', 
+      response_type: 'code',
     });
     return `${GITHUB_ENDPOINTS.AUTHORIZE}?${params.toString()}`;
   }

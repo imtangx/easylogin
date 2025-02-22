@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { EmailConfig } from '@esaylogin/types';
+import { EmailConfig } from '@easylogin/types';
 import { EMAIL_TEMPLATES } from './constant';
 
 export class EmailApiService {

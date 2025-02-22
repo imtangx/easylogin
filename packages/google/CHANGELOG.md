@@ -7,4 +7,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-- **google:** 登录功能(implicit) ([9229440](https://github.com/imtangx/esaylogin/commit/9229440d6872b365ef51dd40128c5680f1e295e1))
+- **google:** 登录功能(implicit) ([9229440](https://github.com/imtangx/easylogin/commit/9229440d6872b365ef51dd40128c5680f1e295e1))

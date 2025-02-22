@@ -1,4 +1,4 @@
-import { EmailConfig, EmailLoginResult, EmailVerifyCodeRecord } from '@esaylogin/types';
+import { EmailConfig, EmailLoginResult, EmailVerifyCodeRecord } from '@easylogin/types';
 import { VERIFY_CODE } from './constant';
 
 export class EmailAuthService {

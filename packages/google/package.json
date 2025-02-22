@@ -1,5 +1,5 @@
 {
-  "name": "@esaylogin/google",
+  "name": "@easylogin/google",
   "version": "1.1.0",
   "description": "google登录包",
   "type": "module",
@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@esaylogin/types": "workspace:^",
+    "@easylogin/types": "workspace:^",
     "axios": "^1.7.9"
   },
   "devDependencies": {

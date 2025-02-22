@@ -1,4 +1,4 @@
-import { GiteeConfig, GiteeLoginResult } from '@esaylogin/types';
+import { GiteeConfig, GiteeLoginResult } from '@easylogin/types';
 import { GiteeAuthService } from './auth';
 import { GiteeApiService } from './api';
 
@@ -22,7 +22,7 @@ export class GiteeLogin {
     try {
       const authResponse = await this.authService.getAccessToken(authCode);
       const userInfo = await this.apiService.getUserInfo(authResponse.access_token);
-      
+
       return {
         success: true,
         data: {

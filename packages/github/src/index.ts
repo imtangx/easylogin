@@ -1,6 +1,6 @@
 import { GithubAuthService } from './auth';
 import { GithubApiService } from './api';
-import { GithubConfig, GithubLoginResult } from '@esaylogin/types';
+import { GithubConfig, GithubLoginResult } from '@easylogin/types';
 
 export class GithubLogin {
   private authService: GithubAuthService;
@@ -11,7 +11,7 @@ export class GithubLogin {
       throw new Error('Missing required configuration');
     }
     this.authService = new GithubAuthService(config);
-    this.apiService = new GithubApiService(); 
+    this.apiService = new GithubApiService();
   }
 
   getAuthUrl(): string {

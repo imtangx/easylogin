@@ -9,13 +9,13 @@
     "composite": true,
     "baseUrl": "./",
     "paths": {
-      "@esaylogin/core": ["packages/core/src"],
-      "@esaylogin/types": ["packages/types/src"],
-      "@esaylogin/github": ["packages/github/src"],
-      "@esaylogin/email": ["packages/email/src"],
-      "@esaylogin/gitee": ["packages/gitee/src"],
-      "@esaylogin/google": ["packages/google/src"],
-      "@esaylogin/react": ["packages/react/src"]
+      "@easylogin/core": ["packages/core/src"],
+      "@easylogin/types": ["packages/types/src"],
+      "@easylogin/github": ["packages/github/src"],
+      "@easylogin/email": ["packages/email/src"],
+      "@easylogin/gitee": ["packages/gitee/src"],
+      "@easylogin/google": ["packages/google/src"],
+      "@easylogin/react": ["packages/react/src"]
     }
   },
   "include": ["./packages/**/*.ts"],

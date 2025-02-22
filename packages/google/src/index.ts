@@ -1,4 +1,4 @@
-import { GoogleConfig, GoogleLoginResult } from '@esaylogin/types';
+import { GoogleConfig, GoogleLoginResult } from '@easylogin/types';
 import { GoogleAuthService } from './auth';
 import { GoogleApiService } from './api';
 

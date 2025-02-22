@@ -1,4 +1,4 @@
-import { EmailConfig, EmailLoginResult } from '@esaylogin/types';
+import { EmailConfig, EmailLoginResult } from '@easylogin/types';
 import { EmailApiService } from './api';
 import { EmailAuthService } from './auth';
 

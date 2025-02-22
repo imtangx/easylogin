@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GiteeUserInfo } from '@esaylogin/types';
+import { GiteeUserInfo } from '@easylogin/types';
 import { GITEE_ENDPOINTS } from './constant';
 
 export class GiteeApiService {

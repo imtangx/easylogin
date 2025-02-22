@@ -40,7 +40,7 @@ importers:
 
   packages/email:
     dependencies:
-      '@esaylogin/types':
+      '@easylogin/types':
         specifier: workspace:^
         version: link:../types
       nodemailer:
@@ -62,7 +62,7 @@ importers:
 
   packages/gitee:
     devDependencies:
-      '@esaylogin/types':
+      '@easylogin/types':
         specifier: workspace:^
         version: link:../types
       axios:
@@ -77,7 +77,7 @@ importers:
 
   packages/github:
     dependencies:
-      '@esaylogin/types':
+      '@easylogin/types':
         specifier: workspace:^
         version: link:../types
       axios:
@@ -99,7 +99,7 @@ importers:
 
   packages/google:
     dependencies:
-      '@esaylogin/types':
+      '@easylogin/types':
         specifier: workspace:^
         version: link:../types
       axios:
@@ -118,10 +118,10 @@ importers:
 
   packages/react:
     dependencies:
-      '@esaylogin/github':
+      '@easylogin/github':
         specifier: workspace:^
         version: link:../github
-      '@esaylogin/types':
+      '@easylogin/types':
         specifier: workspace:^
         version: link:../types
       axios:
