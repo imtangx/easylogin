@@ -1,6 +1,6 @@
 {
   "name": "@esaylogin/email",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "邮箱验证码登录",
   "type": "module",
   "main": "dist/index.cjs",

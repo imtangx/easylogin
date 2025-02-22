@@ -1,6 +1,6 @@
 {
   "name": "@esaylogin/github",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "github登录包",
   "type": "module",
   "main": "dist/index.cjs",

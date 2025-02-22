@@ -1,6 +1,6 @@
 {
   "name": "@esaylogin/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "第三方登录核心包",
   "type": "module",
   "main": "dist/index.js",
